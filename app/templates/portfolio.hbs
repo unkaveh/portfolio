@@ -1,0 +1,13 @@
+
+<h2 class="text-center">Projects</h2>
+<hr class="bookends">
+
+
+  {{outlet}}
+
+    {{#each model as |portfolio|}}
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      {{portfolio-listing portfolio=portfolio}}
+      </div>
+      <br>
+    {{/each}}

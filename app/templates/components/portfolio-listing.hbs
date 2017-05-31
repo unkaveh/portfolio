@@ -1,0 +1,11 @@
+
+
+<a href={{portfolio.codeURL}}><img src={{portfolio.imgURL}}></a>
+<h3>{{portfolio.title}}</h3>
+<p>
+  {{portfolio.codeLanguage}}
+  <br>{{portfolio.dateCompleted}}
+<br>
+  {{portfolio.description}}
+  <br><button class="btn btn-danger" {{action "deleteProject" portfolio}}>Delete</button>
+</p>

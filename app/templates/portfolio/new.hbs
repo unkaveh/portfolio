@@ -1,0 +1,28 @@
+<h2 id="newBook">New Portfolio</h2>
+<form>
+  <div class="form-group">
+    <label for="titleInput">Title</label>
+    {{input value=title placeholder="Title" class="form-control" id="titleInput"}}
+  </div>
+  <div class="form-group">
+    <label for="descriptionInput">Author</label>
+    {{input value=description placeholder="description" class="form-control" id="descriptionInput"}}
+  </div>
+  <div class="form-group">
+    <label for="codeLanguageInput">Code Language</label>
+    {{input value=codeLanguage placeholder="codeLanguage" class="form-control" id="codeLanguageInput"}}
+  </div>
+  <div class="form-group">
+    <label for="imgURL">Image URL</label>
+    {{input value=imgURL placeholder="image url" class="form-control" id="imgURLInput"}}
+  </div>
+  <div class="form-group">
+    <label for="codeURL">Code URL</label>
+      {{input value=codeURL placeholder="code url" class="form-control" id="codeURLInput"}}
+  </div>
+  <div class="form-group">
+    <label for="dateCompleted">Date Completed</label>
+      {{input value=dateCompleted placeholder="Date Completed" class="form-control" id="dateCompletedInput"}}
+  </div>
+  <button {{action "publishProject"}} class="btn btn-default">Publish</button>
+</form>
