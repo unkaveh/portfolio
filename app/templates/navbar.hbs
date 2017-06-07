@@ -11,10 +11,19 @@
     </div>
 
     <div class="collapse navbar-collapse " id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" id="main-test">
             {{#link-to 'index' tagName="li"}}<a href="">Home</a>{{/link-to}}
             {{#link-to 'resume' tagName="li"}} <a href="">Resume</a>{{/link-to}}
             {{#link-to 'portfolio' tagName="li"}} <a href="">Portfolio</a>{{/link-to}}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    <div class="collapse navbar-collapse" id="mobile-navbar" >
+      <ul class="navbar-nav navbar-center" id="mobile-test">
+        <div class="btn-group" role="group">
+            {{#link-to 'index' tagName="button" class="btn btn-default" type="button"}}<a href="">Home</a>{{/link-to}}
+            {{#link-to 'resume' tagName="button" class="btn btn-default" type="button"}} <a href="">Resume</a>{{/link-to}}
+            {{#link-to 'portfolio' tagName="button" class="btn btn-default" type="button"}} <a href="">Portfolio</a>{{/link-to}}
+            </div>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

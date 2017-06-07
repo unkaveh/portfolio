@@ -12,7 +12,9 @@ export default function(){
     this.reverse('fade')
   );
   this.transition(
-    this.hasClass('#myResume'),
-    this.use('fade')
+    this.hasClass('moreInfo'),
+    this.toValue(true),
+    this.use('toDown'),
+    this.reverse('toUp')
   );
 }

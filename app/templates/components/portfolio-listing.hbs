@@ -1,11 +1,42 @@
 
 
-<a href={{portfolio.codeURL}}><img src={{portfolio.imgURL}}></a>
+
 <h3>{{portfolio.title}}</h3>
 <p>
-  {{portfolio.codeLanguage}}
   <br>{{portfolio.dateCompleted}}
 <br>
-  {{portfolio.description}}
-  <br><button class="btn btn-danger" {{action "deleteProject" portfolio}}>Delete</button>
+
+  <br>
+  <button class="btn btn-danger" {{action "deleteProject" portfolio}}>Delete</button>
+  <br>
+  {{#liquid-if isExpanded class="moreInfo"}}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"><a href={{portfolio.codeURL}}><img src={{portfolio.imgURL}} class="img-thumbnail img-responsive"></a></div>
+        <div class="col-md-8 text-left"><br>
+        <b>Code Language(s): </b>
+        {{portfolio.codeLanguage}} <br>
+        <b>Description</b><br>
+        <br><p>{{portfolio.description}}</p></div>
+      </div>
+      <br>
+
+      <button {{action 'contract'}} class="btn btn-danger">Go Back</button>
+
+    </div>
+
+    {{else}}
+    <!-- <button {{action 'expand'}} class="btn btn-danger">Show More...</button> -->
+    <div class="show show-first">
+      <img src={{portfolio.imgURL}} class="img-responsive">
+      <div class="mask">
+      <h2>{{portfolio.title}}</h2>
+      <p class="price">{{portfolio.dateCompleted}}</p>
+      <a href="#" {{action 'expand'}} class="more">More info</a>
+      <br>
+    </div>
+    </div>
+
+  {{/liquid-if}}
 </p>
