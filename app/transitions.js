@@ -6,7 +6,13 @@ export default function(){
     this.reverse('fade')
   );
   this.transition(
-    this.fromRoute('resume' || 'index'),
+    this.fromRoute('resume'),
+    this.toRoute('portfolio'),
+    this.use('fade'),
+    this.reverse('fade')
+  );
+  this.transition(
+    this.fromRoute('index'),
     this.toRoute('portfolio'),
     this.use('fade'),
     this.reverse('fade')

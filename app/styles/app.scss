@@ -20,7 +20,9 @@ p
 body{
   padding-top: 3%;
 }
-
+#header-title{
+  line-height: .4;
+}
 .double{
 	border-top: 3px double #000;
 }
@@ -170,8 +172,8 @@ body{
 }
 
 @include mobile{
-	.navbar-header{
-		display: none;
+	#header-title{
+		line-height: 1;
 	}
 	#mobile-navbar{
 		text-align: center;
@@ -248,7 +250,11 @@ hr {
   padding-top: 12%;
 }
 
-.main-info p{
+#background-info p{
   text-align: left;
   text-indent: 50px;
+}
+
+#panel-info p{
+  text-align: justify;
 }
