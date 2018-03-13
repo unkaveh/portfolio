@@ -7,17 +7,19 @@
 <br>
 
   <br>
-  <button class="btn btn-danger" {{action "deleteProject" portfolio}}>Delete</button>
+  <!-- <button class="btn btn-danger" {{action "deleteProject" portfolio}}>Delete</button> -->
   <br>
   {{#liquid-if isExpanded class="moreInfo"}}
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4"><a href={{portfolio.codeURL}}><img src={{portfolio.imgURL}} class="img-thumbnail img-responsive"></a></div>
+        <div class="col-md-4"><a href={{portfolio.codeURL}}><img src={{portfolio.imgURL}} class="img-thumbnail"></a></div>
         <div class="col-md-8 text-left"><br>
-        <b>Code Language(s): </b>
-        {{portfolio.codeLanguage}} <br>
-        <b>Description</b><br>
+        <b>Code Language(s): </b> {{portfolio.codeLanguage}}<br>
+        <b>Completed In:</b> {{portfolio.dateCompleted}}<br>
+        <b>Live Demo:</b> <a href={{portfolio.codeURL}} target="_blank">Click Here</a><br>
+        <b>GitHub Page:</b> <a href={{portfolio.gitURL}} target="_blank">Click Here</a><br>
+        <b>Description:</b><br>
         <br><p>{{portfolio.description}}</p></div>
       </div>
       <br>

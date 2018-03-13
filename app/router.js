@@ -7,9 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('/', function() {});
-  this.resource('resume', function() {});
-  this.resource('portfolio', function() {});
+  this.route('/');
+  this.route('resume');
+  this.route('portfolio');
 
   this.route('portfolio', function() {
     this.route('new');

@@ -6,5 +6,6 @@ export default DS.Model.extend({
   codeLanguage: DS.attr('string'),
   imgURL: DS.attr('string'),
   codeURL: DS.attr('string'),
+  gitURL: DS.attr('string'),
   dateCompleted: DS. attr('string'),
 });
